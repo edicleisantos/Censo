@@ -10,5 +10,4 @@ class Aluno_Primeiro_Semestre extends Model
     use HasFactory;
     public $timestamps = false;
     protected $table = 'aluno_primeiro_semestre';
-
 }
