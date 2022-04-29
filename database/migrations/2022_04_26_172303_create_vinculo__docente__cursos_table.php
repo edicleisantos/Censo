@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vinculo__docente__cursos', function (Blueprint $table) {
+        Schema::create('vinculo_docente_curso', function (Blueprint $table) {
             $table->increments('id');
             $table->bigInteger('cpf_docente')->unsigned();
             $table->foreign('cpf_docente')->references('idcpf')->on('docentes')->onDelete('cascade');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vinculo__docente__cursos');
+        Schema::dropIfExists('vinculo_docente_curso');
     }
 };
