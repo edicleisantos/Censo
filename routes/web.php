@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\{
     AlunoController,
+    BibliotecaController,
     CursoController,
     DocenteController,
     
@@ -16,3 +17,4 @@ Route::get('/', function () {
 Route::get('/docentes', [DocenteController::class, 'listarDocente'])->name('lista.docentes');
 Route::get('/alunos',   [AlunoController::class, 'listarAluno'])->name('lista.alunos');
 Route::get('/cursos',   [CursoController::class,  'listarCurso'])->name('lista.cursos');
+Route::get('/biblioteca',   [BibliotecaController::class,  'listarBiblioteca'])->name('lista.biblioteca');

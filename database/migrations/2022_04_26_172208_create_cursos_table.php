@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cursos', function (Blueprint $table) {
-            $table->integer('codigo')->unsigned();
-            $table->primary('codigo');
+            $table->bigIncrements('id');
+            $table->integer('codigo');
             $table->string('nome_curso');
             $table->string('setor');
             $table->integer('situacao');

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class CursoController extends Controller
 {
     public function listarCurso(){
-        $cursos = Curso::all();
+        $cursos = Curso::all()->sortBy('codigo');
         return view('curso', ['cursos'=> $cursos]);
     
     
